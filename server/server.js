@@ -11,7 +11,7 @@ const config = require('../config/config');
 const webpackConfig = require('../webpack.config');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const port  = process.env.PORT || 8080;
+const port = process.env.PORT || 4879;
 
 
 // Configuration
@@ -58,12 +58,12 @@ if (isDev) {
   });
 }
 
-app.listen(port, '0.0.0.0', (err) => {
+app.listen(port, 'localhost', (err) => {
   if (err) {
     console.log(err);
   }
 
-  console.info('>>> 🌎 Open http://0.0.0.0:%s/ in your browser.', port);
+  console.info('>>> 🌎 Open http://localhost:%s/ in your browser.', port);
 });
 
 module.exports = app;
