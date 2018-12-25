@@ -1,9 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <header>
+  <HeaderWrapper>
     <Link to="/">Home</Link>
 
     <nav>
@@ -11,7 +12,11 @@ const Header = () => (
     </nav>
 
     <hr />
-  </header>
+  </HeaderWrapper>
 );
+
+const HeaderWrapper = styled.div`
+  background: #ccc;
+`;
 
 export default Header;
